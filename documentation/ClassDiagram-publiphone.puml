@@ -12,7 +12,7 @@ class Caller {
 class Phonebooth {
     - price : float
     - reciver : Reciever
-    + Call() : bool $success
+    + Call() : bool
     + ReturnMoney() : float
 }
 
