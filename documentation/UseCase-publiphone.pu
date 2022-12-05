@@ -1,0 +1,23 @@
+@startuml
+:appelant: as caller
+:recevant: as reciever
+:cabine: as telephone
+
+
+rectangle Publiphone {
+usecase "ajouter de l'argent" as add
+usecase utiliser as use
+usecase appeler as call
+usecase raccrocher as hangup
+usecase "rendre de l'argent" as return
+
+}
+caller --> add
+add ..> use : extends
+use --> telephone
+telephone --> call
+call --> reciever
+reciever --> hangup
+hangup --> return : include
+return --> caller
+@enduml
