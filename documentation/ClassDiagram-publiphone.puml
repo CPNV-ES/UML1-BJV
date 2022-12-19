@@ -1,9 +1,7 @@
 @startuml
-skinparam classAttributeIconSize 11
+skinparam classAttributeIconSize 0
 class Caller {
-    - number : int
     - moneyAmount : float
-    - phonebooth : Phonebooth
     + AddMoney() : void
     + StoreMoney() : float
     + Use(Phonebooth phonebooth) : void
@@ -11,16 +9,18 @@ class Caller {
 }
 class Phonebooth {
     - price : float
-    - receiver : Receiver
+    - number : int
     + Call() : bool
     + ReturnMoney() : float
+    - RemoveMoney() : float
 }
 
 class Receiver {
-    - number : int
+    - number : string
     - phonebooth[] : Phonebooth
     + HangUp() : void
 }
+Caller --|> Receiver
 
 Caller "1" --> "1" Phonebooth
 Phonebooth "1" -- "1,*" Receiver
