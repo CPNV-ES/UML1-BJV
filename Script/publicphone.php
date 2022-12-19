@@ -1,38 +1,40 @@
 <?php
+
 class Caller {
     private Int $number;
-    Private Float $moneyAmount;
-    Private Phonebooth phonebooth;
-    Public AddMoney() : void
+    private Float $moneyAmount;
+    private Phonebooth $phonebooth;
+    public function AddMoney() : void
     {
 
     }
-    Public StoreMoney() : string
+    public function StoreMoney() : string
     {
 
     }
-    Public Use() : void
+    public function Use() : void
     {
 
     }
 
 }
+
 class Phonebooth {
-    Private float price;
-    Private Reciever reciver;
-    Public Call() : bool
+    private float $price;
+    private Reciever $reciver;
+    public function Call() : bool
     {
     }
-    Public ReturnMoney() : float
+    public function ReturnMoney() : float
     {
 
     }
 }
 
 class Reciever {
-    private Int number;
-    Private Phonebooth phonebooth[]; 
-    Public HangUp() : void
+    private Int $number;
+    private Phonebooth $phonebooth; 
+    public function HangUp() : void
     {
 
     }
