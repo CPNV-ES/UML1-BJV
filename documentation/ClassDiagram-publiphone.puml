@@ -1,12 +1,12 @@
 @startuml
 skinparam classAttributeIconSize 11
 class Caller {
-    - number : int
+    - number : int //TODO 
     - moneyAmount : float
     - phonebooth : Phonebooth
     + AddMoney() : void
     + StoreMoney() : float
-    + Use(Phonebooth phonebooth) : void
+    + Use(Phonebooth phonebooth) : void //function name use should be more clear !!!
 
 }
 class Phonebooth {
