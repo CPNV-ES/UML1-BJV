@@ -10,5 +10,6 @@ class Receiver {
 
     }
 
+    //TODO The receiver should have only 2 methods (HangUp and PickUp)
     public static Receiver getByPhoneNUmber($phoneNumber);
 }
