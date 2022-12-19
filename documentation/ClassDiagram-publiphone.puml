@@ -5,27 +5,27 @@ class Caller {
     - moneyAmount : float
     - phonebooth : Phonebooth
     + AddMoney() : void
-    + StoreMoney() : string
-    + Use() : void
+    + StoreMoney() : float
+    + Use(Phonebooth phonebooth) : void
 
 }
 class Phonebooth {
     - price : float
-    - reciver : Reciever
+    - receiver : Receiver
     + Call() : bool
     + ReturnMoney() : float
 }
 
-class Reciever {
+class Receiver {
     - number : int
     - phonebooth[] : Phonebooth
     + HangUp() : void
 }
 
 Caller "1" --> "1" Phonebooth
-Phonebooth "1" -- "1,*" Reciever
+Phonebooth "1" -- "1,*" Receiver
 
-note right of Reciever
+note right of Receiver
   The cardinality of the link Phonebooth -> Reciever
   is a 1,* because the Reciever can be a number like 911
 end note

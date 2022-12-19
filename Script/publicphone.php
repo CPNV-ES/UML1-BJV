@@ -21,7 +21,9 @@ class Caller {
 
 class Phonebooth {
     private float $price;
+
     private string $number;
+
     public function Call() : bool
     {
     }
@@ -37,7 +39,9 @@ class Phonebooth {
 }
 
 class Receiver {
+
     private string $number;
+
     private Phonebooth $phonebooth; 
     public function HangUp() : void
     {
