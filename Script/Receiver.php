@@ -9,4 +9,6 @@ class Receiver {
     {
 
     }
+
+    public static Receiver getByPhoneNUmber($phoneNumber);
 }
