@@ -4,7 +4,7 @@ class Caller {
     - moneyAmount : float
     + AddMoney() : void
     + StoreMoney() : float
-    + Use(Phonebooth phonebooth) : void
+    + UsePhoneBooth(Phonebooth phonebooth) : void 
 
 }
 class Phonebooth {
@@ -16,12 +16,14 @@ class Phonebooth {
 }
 
 class Receiver {
+
     - number : string
     - phonebooth[] : Phonebooth
     + HangUp() : void
 }
 Caller --|> Receiver
 
+Caller --|> Receiver
 Caller "1" --> "1" Phonebooth
 Phonebooth "1" -- "1,*" Receiver
 
