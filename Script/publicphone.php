@@ -21,11 +21,12 @@ class Caller {
 
 class Phonebooth {
     private float $price;
-
+    private Receiver $receiver;
     private string $number;
 
-    public function Call() : bool
+    public function Call($phoneNumber: string) : Receiver
     {
+        return Receiver::getByPhoneNumber($phoneNumber);
     }
     public function ReturnMoney() : float
     {
@@ -48,5 +49,6 @@ class Receiver {
 
     }
 
+    public static Receiver getByPhoneNumber($phoneNumber: string);
     //TODO inheritance with caller
 }
