@@ -10,5 +10,6 @@ Caller -> phone : Use
 phone -> Reciever : Call
 Reciever --> phone : Hang up
 Reciever --> phone : Time up
+phone -> phone : Remove Money
 phone --> Caller : Return money
 @enduml

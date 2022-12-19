@@ -21,7 +21,7 @@ class Caller {
 
 class Phonebooth {
     private float $price;
-    private Receiver $receiver;//juste add phone number to call
+    private string $number;
     public function Call() : bool
     {
     }
@@ -30,7 +30,10 @@ class Phonebooth {
         
     }
 
-    //TODO Add Method to manage the cost
+    private function RemoveMoney() : floatval
+    {
+
+    }
 }
 
 class Receiver {
